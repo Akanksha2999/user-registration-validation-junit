@@ -16,7 +16,7 @@ public class UserRegistrationValidationTest {
     //Validation for first name in positive scenario
     @Test
     public void validateFirstNameForPositiveScenarioTest() throws UserRegistrationValidationException {
-        boolean actualOutput = userRegistrationValidation.validateFirstName("Akanksha");
+        boolean actualOutput = userRegistrationValidation.validateFirstName.validate("Akanksha");
         Assert.assertTrue(actualOutput);
     }
 
@@ -24,7 +24,7 @@ public class UserRegistrationValidationTest {
     @Test
     public void validateFirstNameForNegativeScenarioTest() {
         try {
-            userRegistrationValidation.validateFirstName("akanksha");
+            userRegistrationValidation.validateFirstName.validate("akanksha");
         } catch (UserRegistrationValidationException exception) {
             Assert.assertEquals("Entered invalid first name", exception.getMessage());
         }
@@ -33,7 +33,7 @@ public class UserRegistrationValidationTest {
     //Validation for last name in positive scenario
     @Test
     public void validateLastNameForPositiveScenarioTest() throws UserRegistrationValidationException {
-        boolean actualOutput = userRegistrationValidation.validateLastName("Jadhav");
+        boolean actualOutput = userRegistrationValidation.validateLastName.validate("Jadhav");
         Assert.assertTrue(actualOutput);
     }
 
@@ -41,7 +41,7 @@ public class UserRegistrationValidationTest {
     @Test
     public void validateLastNameForNegativeScenarioTest() {
         try {
-            userRegistrationValidation.validateLastName("jadhav");
+            userRegistrationValidation.validateLastName.validate("jadhav");
         } catch (UserRegistrationValidationException exception) {
             Assert.assertEquals("Entered invalid last name", exception.getMessage());
         }
@@ -50,7 +50,7 @@ public class UserRegistrationValidationTest {
     //Validation for email id in positive scenario
     @Test
     public void validateEmailIdForPositiveScenarioTest() throws UserRegistrationValidationException {
-        boolean actualOutput = userRegistrationValidation.validateEmailId("akankshajadhav2999@gmail.com.in");
+        boolean actualOutput = userRegistrationValidation.validateEmailId.validate("akankshajadhav2999@gmail.com.in");
         Assert.assertTrue(actualOutput);
     }
 
@@ -58,7 +58,7 @@ public class UserRegistrationValidationTest {
     @Test
     public void validateEmailIdForNegativeScenarioTest() {
         try {
-            userRegistrationValidation.validateEmailId("akankshajadhav2999@gmail");
+            userRegistrationValidation.validateEmailId.validate("akankshajadhav2999@gmail");
         } catch (UserRegistrationValidationException exception) {
             Assert.assertEquals("Entered invalid email id", exception.getMessage());
         }
@@ -67,7 +67,7 @@ public class UserRegistrationValidationTest {
     //Validation for mobile number in positive scenario
     @Test
     public void validateMobileNumberForPositiveScenarioTest() throws UserRegistrationValidationException {
-        boolean actualOutput = userRegistrationValidation.validateMobileNumber("+91 8828166460");
+        boolean actualOutput = userRegistrationValidation.validateMobileNumber.validate("+91 8828166460");
         Assert.assertTrue(actualOutput);
     }
 
@@ -75,7 +75,7 @@ public class UserRegistrationValidationTest {
     @Test
     public void validateMobileNumberForNegativeScenarioTest() {
         try {
-            userRegistrationValidation.validateMobileNumber("+9 8828166460");
+            userRegistrationValidation.validateMobileNumber.validate("+9 8828166460");
         } catch (UserRegistrationValidationException exception) {
             Assert.assertEquals("Entered invalid mobile number", exception.getMessage());
         }
@@ -84,7 +84,7 @@ public class UserRegistrationValidationTest {
     //Validation for password in positive scenario
     @Test
     public void validatePasswordForPositiveScenarioTest() throws UserRegistrationValidationException {
-        boolean actualOutput = userRegistrationValidation.validatePassword("AkankshaJadhav@99");
+        boolean actualOutput = userRegistrationValidation.validatePassword.validate("AkankshaJadhav@99");
         Assert.assertTrue(actualOutput);
     }
 
@@ -92,7 +92,7 @@ public class UserRegistrationValidationTest {
     @Test
     public void validatePasswordForNegativeScenarioTest() {
         try {
-            userRegistrationValidation.validatePassword("AkankshaJadhav@");
+            userRegistrationValidation.validatePassword.validate("AkankshaJadhav@");
         } catch (UserRegistrationValidationException exception) {
             Assert.assertEquals("Entered invalid password", exception.getMessage());
         }
